@@ -20,6 +20,5 @@ This project was developed within a professional framework. I would like to than
 3. Managing **PostgreSQL** data models and API development.
 
 ## 📈 About Me
-- **Candidate:** Tuğba Sena Özdal
 - **Major:** Software Engineering at Fırat University 
 - **Focus:** Backend Development & AI Architectures
