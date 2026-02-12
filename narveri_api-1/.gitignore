@@ -1,0 +1,18 @@
+# IntelliJ IDE dosyaları
+.idea/
+*.iml
+out/
+gen/
+.DS_Store
+
+# Java / Maven çıktıları (En çok yer kaplayanlar)
+target/
+*.class
+
+# Frontend / Node çıktıları
+node_modules/
+dist/
+build/
+
+# Hassas veriler
+.env

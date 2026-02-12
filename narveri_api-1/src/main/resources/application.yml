@@ -1,0 +1,86 @@
+spring:
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+        chat:
+          options:
+            model: gemini-2.5-pro
+        embedding:
+          api-key: ${GEMINI_API_KEY}
+          text:
+            options:
+              model: text-embedding-004
+
+
+  servlet:
+    multipart:
+      max-file-size: 150MB
+      max-request-size: 250MB
+
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    hikari:
+      maximum-pool-size: 2
+      idle-timeout: 15000
+      connection-timeout: 20000
+      minimum-idle: 2
+      max-lifetime: 30000
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      org:
+        hibernate:
+          format_sql: false
+          envers:
+            default_schema: project_audit
+            store_data_at_delete: true
+
+  mvc:
+    problemdetails:
+      enabled: true
+
+  threads:
+    virtual:
+      enabled: true
+
+jwt:
+  secret: ${JWT_SECRET}
+
+mail:
+  host: smtp.gmail.com
+  port: 587
+  username: l@gmail.com
+  password: ldslsdldslds
+  default-to: l@gmail.com
+  default-from: l@gmail.com
+
+esnek_pos:
+  url: https://posservicetest.esnekpos.com/api
+
+uploadcare:
+  public-key: ${UPLOADCARE_PUBLIC_KEY}
+  secret-key: ${UPLOADCARE_SECRET_KEY}
+
+app:
+  upload:
+    max-size-mb: 100
+
+  # 🆕 pgvector config (Spring AI)
+
+  ai:
+    vectorstore:
+      pgvector:
+        enabled: true
+        index-type: hnsw
+        distance-type: cosine
+        dimensions: 768
