@@ -21,5 +21,5 @@ This project was developed within a professional framework. I would like to than
 
 ## 📈 About Me
 - **Candidate:** Tuğba Sena Özdal
-- **Major:** Software Engineering at Fırat University (Expected 2026) | GPA: 3.21
+- **Major:** Software Engineering at Fırat University 
 - **Focus:** Backend Development & AI Architectures
